@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 19th Birthday 💖</title>
+
+<style>
+body {
+    margin:0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to top,#ffe6f0,#fff);
+    overflow-x:hidden;
+    text-align:center;
+    position: relative;
+}
+
+/* Sparkles */
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ffccff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: sparkleAnim linear infinite;
+}
+@keyframes sparkleAnim {
+    0% {transform: translateY(0) scale(1);}
+    50% {transform: translateY(-20px) scale(1.5);}
+    100% {transform: translateY(0) scale(1);}
+}
+
+h1 {
+    margin-top:40px;
+    font-size:42px;
+    color:#ff3366;
+    text-shadow:0 0 15px #ff99cc;
+}
+
+#typing {
+    font-size:24px;
+    margin:10px 0 20px;
+    color:#444;
+}
+
+button {
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff3366;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+button:hover { transform:scale(1.05); }
+
+.message-container {
+    display:none;
+    max-width:700px;
+    margin:30px auto;
+    padding:20px;
+    background:rgba(255,255,255,0.95);
+    border-radius:12px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+    line-height:1.7;
+    font-size:18px;
+}
+
+/* Balloons */
+.balloon {
+    position:absolute;
+    bottom:-150px;
+    border-radius:50%;
+    opacity:0.9;
+    animation:floatUp linear infinite, sway ease-in-out infinite alternate;
+    cursor:pointer;
+    border: 2px solid white;
+}
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-120vh) rotate(360deg); }
+}
+@keyframes sway {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(15px); }
+    100% { transform: translateX(0px); }
+}
+
+/* Hearts */
+.heart {
+    position:absolute;
+    font-size:24px;
+    animation:heartUp 2s ease-out forwards;
+    pointer-events:none;
+}
+@keyframes heartUp {
+    from {opacity:1; transform:translateY(0);}
+    to {opacity:0; transform:translateY(-80px);}
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.9;
+    pointer-events:none;
+    animation:confettiFall linear forwards;
+}
+@keyframes confettiFall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(250px) rotate(360deg); opacity:0; }
+}
+
+/* Popup surprise */
+#popup {
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background:rgba(255,255,255,0.95);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    font-size:24px;
+    color:#ff3366;
+    z-index:9999;
+    animation:popupAnim 0.8s ease-out forwards;
+}
+@keyframes popupAnim {
+    0% {transform: translate(-50%, -60%) scale(0.5); opacity:0;}
+    100% {transform: translate(-50%, -50%) scale(1); opacity:1;}
+}
+
+/* Warning popup */
+#warnPopup {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    font-size: 24px;
+    z-index: 10000;
+}
+#warnPopup button {
+    margin:10px;
+    padding:10px 20px;
+    font-size:20px;
+    border-radius:10px;
+}
+</style>
+</head>
+<body>
+
+<div id="warnPopup">
+    <h2>Are you sure you want to open this bby girl? 💖</h2>
+    <div>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+</div>
+
+<h1>Happy 19th Birthday 💕</h1>
+<div id="typing"></div>
+<button id="openBtn">💝 Open My Gift</button>
+
+<div class="message-container" id="message">
+<p>Happiestttttttttttttttttttttttttt birthdayyy myyyy loveeeeeee my areeebaaaaaaaaaa❤️❤️❤️❤️❤️❤️❤️❤️❤️ sooo thiss is your first bdayy after finally being fully minee Alhamdulliahhh and ydkk how happy i am to get you in my life my lifee isss fillfulled with joy laughter and whatt not tmm mjyyyy bhtttt zydaaa psndd ho bhttt zydaaaa pyarii hoo tummmm meriii jaannnnnn mai tmhary sthh itnaaa khushhhh huu itnaaaa it feels likeeee my life is completed now my only task is to get successful and marry you dekho i understand maybee ye bday us tareeqy ki excited na hoo cz obv milny bh nai skta kch achaa sa intezam bh nai krskta the best i can do is this for now IA jb parents mil lengy tb hr khuwaish puri krunga mai us wqt tk liay we have to wait im so so sooo sorry abt that my lovee but you in my life is likeee samosa with chutney i love you soo muchhh itnii achii lgtii whnv u laughhh withh full joy with relaxed mind and wohi same areeba syyy im falling in love bar bar barrrr meri januu meri janemannn this is ur 19th bday and InshAllahhhhh i will also celebrate you 99th bday with me too agr mai zinda hua tau💀 Allah tala apki hr pareshani dur kryyy hr khushi apko dyy (mere sth….) you are love of my life yes i agree perfect nai hu but i will do everything jesa tm chahti ill love you moree and moree ur eyesss urr laughsss urrr calmness urr kid is smth im in love withhh whole you whole areeba jawed is my love the only thing im studying or wtv is js to get you is js to spend my rest of my life with you. agr sb chinn bh jaye na mjsy lkin tm ho mery ps means mery ps sy kch bh chiina hai❤️ ydk tm meri life mai mery dil mai kis jgh stand krti ho you genuinely dont know mai tmhary liay kya kch nai kr skta fights and arguments are at diff place wo tau bhai bhn sy bh hoty lkin we all know hum unky liay jaan bh dedy same with you my lovee i’ll fight with everyone to get you my darling naii hogii ye bday itni excitment wali apky liay i understand lekinn jss thora sa time please? im in soo much regret us type ki nai hogi ye bday lkin trust me mai bd mai issy bh best kr k dunga tmhe k ull forget every other bday of ur life tum meri ho Areeba sirf meri if i have said to marry you tau think once how much i love you that i want to spend my remaining life with you. you’re the light of my heart my fairy 🧚‍♀️ my cute kid idc how many kids we got but ull will be the first kid jisko maine pala hoga tmhari zidd tmhari hr chz mai puri krunga meri ho or ziddi na ho. ho hi nai sktaa purayy tareeqy sy bigarr dungaa tmheee  wo hotaa naa wo jo hoty bachyy jo bs ek lfz bolty or unko wo mil jata wo bna dungaa mai apko bss Allah ny itni hesiat di tau may this day may every single day apky liay khushi ka din ho khushi ki rt ho please keep smiling tension mai achi nai lgti🥺 but when u laugh? OH MY YESSS IS SMTH I COULD DIE FORRRR thattt ankhein bnd kr k hansa?😭😭😭😭 one of my favvv yarrrrr kitniiiiiiii cutee lgtiii hooo appp MashAllahhhhhhhhhhhh bss aise hi apkooo happy rkhungaa maiiiii InshAlllahhhhh dekhoo bhae lipstick ka idkk lkin kajal kbbi nai khrb hony dungaa lipstick ka tau… yk everytime kissing 😭😭❤️ literally cryingg my heart out while typingg this for you trust me once no one NO ONE can love you the way i love you my girl my areeba my love and itnii achi bt dekho friday ko bday ai hai tmhariii soo lucky you areee please enjoy this and everyother day jesy its urs bcz at the end jo bh issue hoga u js have to tell me ill handle it dont overthink dont think abt others bhad mai jaye sbb rn im here for u for ur craving forrr everythingggg meri chikni chambeli meri bhoondi ki ladduuuuu life is soo long hr tareeqy ki mushkilat ayengi lkin bs i need u ur motivation and bas sbb dekh lungaaa wtvvv it issss i just need you to be my side everytimee my love everysingle time mere jigar ki tukri ho tum there’s only one way i can stop loving you and that is ky mai mar jao bss isky ilawa kch nai u come in my dreams everywhere you are 
+“tere chehre ki khushi meri duniya hai
+tere bina hr pal adhoora
+tm meri hr dua mai basi hai 
+meri hr khushi tmse juri hai”😭😭❤️❤️❤️❤️ i loveee myyy girlll soo muchhh so muchhh sooo muchhhhhhhhhhh ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️ MUWAHHH MUWAHHH MUWAHHH MUWAHHHHHHHHHHHHHHH
+I love You areeba rafay once again Happy birthday to love of my life my supporter my mood changer and my everything ❤️🌍</p>
+<p><strong>Forever yours,<br>Abdul Rafey</strong></p>
+</div>
+
+<div id="popup">🎉 Happpyy Birthday choozi❤️❤️</div>
+
+<audio id="music" loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1e4c85a1d1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Typing effect
+const text = "My Love, My Areeba 💗";
+let i=0;
+function type(){
+    if(i<text.length){
+        document.getElementById("typing").innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(type,120);
+    }
+}
+type();
+
+// Balloons & hearts
+const colors=['#ff3366','#ff6699','#ffcc99','#33ccff','#9933ff'];
+for(let i=0;i<25;i++){
+    let b=document.createElement("div");
+    b.className="balloon";
+    b.style.background=colors[Math.floor(Math.random()*colors.length)];
+    b.style.left=Math.random()*100+"vw";
+    b.style.width=30+Math.random()*30+"px";
+    b.style.height=50+Math.random()*50+"px";
+    b.style.animationDuration=(7+Math.random()*5)+"s";
+    b.style.animationDelay=(Math.random()*5)+"s";
+    document.body.appendChild(b);
+    b.addEventListener('click', ()=>{ b.remove(); });
+}
+
+// Floating hearts randomly
+setInterval(()=>{
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="💗";
+    h.style.left=Math.random()*100+"vw";
+    h.style.top=Math.random()*100+"vh";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),2500);
+},1000);
+
+// Click hearts
+document.addEventListener("click",e=>{
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="💗";
+    h.style.left=e.pageX+"px";
+    h.style.top=e.pageY+"px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),1500);
+});
+
+// Music & gift opening
+const music = document.getElementById("music");
+const openBtn = document.getElementById("openBtn");
+
+openBtn.addEventListener("click", () => {
+    document.getElementById("message").style.display = "block";
+    music.play().catch(()=>setTimeout(()=>music.play(),100));
+    fullConfetti();
+    showPopup();
+});
+
+// Confetti
+function fullConfetti(){
+    for(let i=0;i<50;i++){
+        let c=document.createElement("div");
+        c.className="confetti";
+        c.style.background=colors[Math.floor(Math.random()*colors.length)];
+        c.style.left=Math.random()*100+"vw";
+        c.style.top=Math.random()*50+"px";
+        c.style.width=5+Math.random()*8+"px";
+        c.style.height=5+Math.random()*8+"px";
+        c.style.animationDuration=2+Math.random()*1+"s";
+        document.body.appendChild(c);
+        setTimeout(()=>c.remove(),3000);
+    }
+}
+
+// Popup
+function showPopup(){
+    const pop=document.getElementById("popup");
+    pop.style.display="block";
+    setTimeout(()=>{ pop.style.display="none"; },3500);
+}
+
+// Warning popup
+const warnPopup = document.getElementById("warnPopup");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+
+yesBtn.onclick = () => {
+    warnPopup.innerHTML = "<h2>Here you go, my love 💖</h2>";
+    setTimeout(()=>{ warnPopup.style.display='none'; }, 1200);
+}
+
+noBtn.onclick = () => {
+    warnPopup.innerHTML = "<h2>Ohoo, your loss 😢</h2>";
+}
+</script>
+</body>
+</html>
